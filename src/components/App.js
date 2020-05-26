@@ -48,7 +48,7 @@ class App extends React.Component {
     const nom = this.state.newTask
     const oneNewTask = {id: id, text: nom, completed: false}
     const tasks = this.state.todos.slice()
-    tasks.push(oneNewTask)
+    tasks.unshift(oneNewTask)
     this.setState({todos: tasks})
   }
 
@@ -62,7 +62,6 @@ class App extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <input type='text' placeholder='New Task' value={this.state.newTask} onChange={this.createTask}></input>
           <button>Add</button>
-          <h1>{this.state.newTask}</h1>
         </form>
         {todoItems}
         </div>
