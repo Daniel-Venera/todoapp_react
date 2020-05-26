@@ -6,4 +6,6 @@ You can Run the app in the development mode with `yarn start`. Open [http://loca
 
 I've deployed the app in GitHub Pages here : https://daniel-venera.github.io/todoapp_react/
 
+As you see it in the app, next modifications and features are coming.
+
 This was my first project in React so I hope you enjoy it !
