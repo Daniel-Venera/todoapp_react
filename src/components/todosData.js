@@ -45,14 +45,14 @@ const todosData = [
     completed: false
   },
   {
-    id: 10,
-    text: 'Feature : delete all completed tasks',
-    completed: false
-  },
-  {
     id: 11,
     text: 'Feature : tasks sections',
     completed: false
+  },
+  {
+    id: 12,
+    text: 'Deployed on Github Pages',
+    completed: true
   },
   
 ]
