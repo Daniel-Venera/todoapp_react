@@ -39,17 +39,18 @@ class App extends React.Component {
       newTask: event.target.value
     }
     )
-    console.log(this.state.todos)
   }
 
   handleSubmit(event) {
     event.preventDefault()
-    const id = new Date().getTime()
-    const nom = this.state.newTask
-    const oneNewTask = {id: id, text: nom, completed: false}
-    const tasks = this.state.todos.slice()
-    tasks.unshift(oneNewTask)
-    this.setState({todos: tasks})
+    if (this.state.newTask) {
+      const id = new Date().getTime()
+      const nom = this.state.newTask
+      const oneNewTask = { id: id, text: nom, completed: false }
+      const tasks = this.state.todos.slice()
+      tasks.unshift(oneNewTask)
+      this.setState({ todos: tasks, newTask: '' })
+    }
   }
 
   render() {
@@ -57,13 +58,13 @@ class App extends React.Component {
     return (
       <div>
         <Navbar />
-        
         <div className='todo-list'>
-        <form onSubmit={this.handleSubmit}>
-          <input type='text' placeholder='New Task' value={this.state.newTask} onChange={this.createTask}></input>
-          <button>Add</button>
-        </form>
-        {todoItems}
+          <form onSubmit={this.handleSubmit}>
+            <input className='newtask' type='text' placeholder='New Task' value={this.state.newTask} onChange={this.createTask}></input>
+            <button>Add</button>
+          </form>
+          <br></br>
+          {todoItems}
         </div>
         <Footer />
       </div>
