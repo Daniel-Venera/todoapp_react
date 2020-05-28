@@ -1,7 +1,6 @@
 import React from 'react'
 
 import TodoItem from "./TodoItem"
-import todosData from "./todosData"
 import Footer from "./Footer"
 import Navbar from "./Navbar"
 
@@ -10,7 +9,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      todos: todosData,
+      todos: [],
       newTask: ''
     }
     this.handleChange = this.handleChange.bind(this)
